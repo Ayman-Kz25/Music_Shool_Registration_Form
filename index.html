@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music School Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="banner">
+            <div class="banner-grid">
+                <div class="banner-img"></div>
+                <div class="banner-text">
+                    <h1 class="title">Music School </br>Registration</h1>
+                    <p class="sub-title">Register for learning the best music from below</p>
+                </div>
+            </div>
+        </div>
+        <form name="submit-to-google-sheet">
+
+            <!-- Full Name -->
+            <fieldset>
+                <legend>Name <span>*</span></legend>
+                <div class="input-grid">
+                    <div class="left">
+                        <input type="text" name="First-Name" id="first-name" required>
+                        <label for="first-name">First Name</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="Last-Name" id="last-name" required>
+                        <label for="last-name">Last Name</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Birth Date -->
+            <fieldset>
+                <legend>Birth Date <span>*</span></legend>
+                <div class="birth-grid">
+                    <div class="month-col">
+                        <select name="Month" id="month" required>
+                            <option value="" disabled selected>Select Month</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                        <label for="month">Month</label>
+                    </div>
+                    <div class="day-col">
+                        <select name="Date" id="day" required>
+                            <option value="" disabled selected>Select Date</option>
+                        </select>
+                        <label for="day">Date</label>
+                    </div>
+                    <div class="year-col">
+                        <select name="Year" id="year" required>
+                            <option value="" disabled selected>Select Year</option>
+                        </select>
+                        <label for="year">Year</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Select any Instrument -->
+            <fieldset>
+                <legend>Choice of Instrument <span>*</span></legend>
+                <div class="inst-box">
+                    <select name="Instrument" id="instrument" required>
+                        <option value="" disabled selected>Please Select</option>
+                        <option value="Violin">Violin</option>
+                        <option value="Guitar">Guitar</option>
+                        <option value="Piano">Piano</option>
+                        <option value="Drum">Drum</option>
+                        <option value="Vocals">Vocals</option>
+                </select>
+                </div>
+            </fieldset>
+
+            <!-- Pick Days for Classes -->
+            <fieldset>
+                <legend>Pick Days for Classes <span>*</span></legend>
+        
+                <div class="class-day">
+                    <input type="checkbox" name="Days" value="Monday" id="mon">
+                    <label for="mon">Monday</label>
+                </div>
+                <div class="class-day">
+                    <input type="checkbox" name="Days" value="Tuesday" id="tue">
+                    <label for="tue">Tuesday</label>
+                </div>
+                <div class="class-day">
+                    <input type="checkbox" name="Days" value="Wednesday" id="wed">
+                    <label for="wed">Wednesday</label>
+                </div>
+                <div class="class-day">
+                    <input type="checkbox" name="Days" value="Thursday" id="thu">
+                    <label for="thu">Thursday</label>
+                </div>
+                <div class="class-day">
+                    <input type="checkbox" name="Days" value="Friday" id="fri">
+                    <label for="fri">Friday</label>
+                </div>
+                <div class="class-day">
+                    <input type="checkbox" name="Days" value="Saturday" id="sat">
+                    <label for="sat">Saturday</label>
+                </div>
+                <div class="class-day">
+                    <input type="checkbox" name="Days" value="Sunday" id="sun">
+                    <label for="sun">Sunday</label>
+                </div>
+            </fieldset>
+
+            <!-- Select Starting Data and Time -->
+             <fieldset>
+                <legend>Start Date and Time <span>*</span></legend>
+                <div class="date-grid">
+                    <div class="date-col">
+                        <input type="date" name="Start-Date" id="start-date" required>
+                        <label for="start-date">Date</label>
+                    </div>
+                    <div class="time-col">
+                        <input type="time" name="Class-Time" id="class-time" min="08:00" max="22:00" required>
+                        <label for="class-time">Time</label>
+                    </div>
+                </div>
+             </fieldset>
+
+             <!-- Comment Section -->
+             <fieldset>
+                <legend>Comments</legend>
+                <textarea name="Comment" id="comment" rows="6" cols="30"></textarea>
+             </fieldset>
+
+             <!-- Form Submit Button -->
+              <button type="submit" class="btn">
+                Submit
+              </button>
+              <span id="msg"></span>
+        </form>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
